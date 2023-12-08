@@ -6,7 +6,6 @@ import cors from "cors";
 let register = [];
 let memory = new Map();
 
-
 let policy = 1;
 let ways = 4;
 
@@ -93,10 +92,15 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 
-const localhost = "127.0.0.1";
+const port = process.env.PORT || 3001;
 
-app.listen(8080, localhost, () => {
-  console.log("Server running on port 8080!");
+app.listen(port, () => {
+  console.log(`Server running on port ${port}!`);
+});
+
+app.get("/", (req, res) => {
+  console.log("Server pinged successully");
+  res.status(200).send("Server running...");
 });
 
 app.get("/data", (req, res) => {
@@ -104,7 +108,6 @@ app.get("/data", (req, res) => {
 });
 
 app.post("/config", (req, res) => {
-
   cache_size = req.body.cache;
   cache_block_size = req.body.block;
   mapping = req.body.mapping;
