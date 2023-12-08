@@ -1,0 +1,23 @@
+{
+  "name": "phase3",
+  "version": "1.0.0",
+  "description": "================================================\r Functional Simulator for subset of RISCV Processor\r ================================================",
+  "main": "index.js",
+  "bin": {
+    "phase3": "bin/index.js"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start  \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

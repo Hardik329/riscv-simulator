@@ -1,0 +1,20 @@
+I$:
+
+Number of accesses: 17
+Number of hits: 3
+Number of misses: 14
+Number of cold misses: 14
+Number of conflict misses: 0
+Number of capacity misses: 0
+Number of memory stalls: 14
+
+
+D$:
+
+Number of accesses: 0
+Number of hits: 0
+Number of misses: 0
+Number of cold misses: 0
+Number of conflict misses: 0
+Number of capacity misses: 0
+Number of memory stalls: 0
