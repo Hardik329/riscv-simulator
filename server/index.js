@@ -39,7 +39,11 @@ const input = () => {
 };
 
 const spawnProcess = () => {
-  child = spawn("myRISCVSim.exe");
+  try {
+    child = spawn("myRISCVSim.exe");
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const run = async () => {
